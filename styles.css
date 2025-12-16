@@ -863,10 +863,10 @@ section {
     margin-bottom: 1rem;
 }
 
-.add-to-cart-btn {
+.whatsapp-btn {
     width: 100%;
     padding: 0.875rem 1.5rem;
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    background: linear-gradient(135deg, #25D366, #128C7E);
     color: white;
     border: none;
     border-radius: 25px;
@@ -876,16 +876,137 @@ section {
     transition: all 0.3s;
     box-shadow: var(--shadow);
     margin-top: 0.5rem;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
 }
 
-.add-to-cart-btn:hover {
+.whatsapp-btn:hover {
     transform: translateY(-2px);
     box-shadow: var(--shadow-hover);
-    background: linear-gradient(135deg, var(--accent-color), var(--dark-color));
+    background: linear-gradient(135deg, #128C7E, #075E54);
+    color: white;
 }
 
-.add-to-cart-btn:active {
+.whatsapp-btn:active {
     transform: translateY(0);
+}
+
+/* WhatsApp Contact Card */
+.contact-options {
+    margin-bottom: 3rem;
+}
+
+.whatsapp-contact-card {
+    background: linear-gradient(135deg, rgba(37, 211, 102, 0.1), rgba(18, 140, 126, 0.1));
+    border: 2px solid rgba(37, 211, 102, 0.3);
+    border-radius: 20px;
+    padding: 2.5rem;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 500px;
+    box-shadow: var(--shadow);
+}
+
+.whatsapp-icon-large {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.whatsapp-contact-card h3 {
+    color: var(--dark-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.whatsapp-contact-card p {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+.whatsapp-button-large {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s;
+    box-shadow: var(--shadow);
+    margin-bottom: 1rem;
+}
+
+.whatsapp-button-large:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+    background: linear-gradient(135deg, #128C7E, #075E54);
+    color: white;
+}
+
+.whatsapp-icon {
+    font-size: 1.3rem;
+}
+
+.phone-number {
+    color: var(--accent-color);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+}
+
+/* Floating WhatsApp Button */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 2rem;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s;
+    animation: floatWhatsApp 3s ease-in-out infinite;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+    background: linear-gradient(135deg, #128C7E, #075E54);
+}
+
+.whatsapp-float-icon {
+    font-size: 2rem;
+}
+
+@keyframes floatWhatsApp {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 /* Gallery Section */
@@ -1827,9 +1948,34 @@ section {
 
 /* Mobile Phones */
 @media (max-width: 480px) {
-    .add-to-cart-btn {
+    .whatsapp-btn {
         padding: 0.75rem 1.25rem;
         font-size: 0.9rem;
+    }
+    
+    .whatsapp-contact-card {
+        padding: 1.5rem;
+    }
+    
+    .whatsapp-icon-large {
+        font-size: 3rem;
+    }
+    
+    .whatsapp-button-large {
+        padding: 0.875rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .whatsapp-float {
+        width: 55px;
+        height: 55px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 1.8rem;
+    }
+    
+    .whatsapp-float-icon {
+        font-size: 1.8rem;
     }
     
     .cart-icon {
